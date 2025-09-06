@@ -8,5 +8,3 @@ RUN apk update && apk add --no-cache ffmpeg
 # Switch back to node user (important: use 'node' not 'root')
 USER node
 
-# The n8n image already has the correct entrypoint
-CMD ["n8n", "start"]
