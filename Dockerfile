@@ -5,14 +5,8 @@ USER root
 # Install ffmpeg
 RUN apk add --no-cache ffmpeg
 
-# Switch back to node user
+# Switch back to node user (important: use 'node' not 'root')
 USER node
 
-# Set work directory
-WORKDIR /home/node
-
-# Expose n8n port
-EXPOSE 5678
-
-# Start n8n
-CMD ["n8n", "start"]
+# The n8n image already has the correct entrypoint
+# Don't override CMD - let it use the default
