@@ -1,7 +1,7 @@
 {
 	"build": {
-		"builder": "DOCKERFILE",
-		"dockerfilePath": "Dockerfile"
+		"builder": "NIXPACKS",
+		"buildCommand": "apk update && apk add --no-cache ffmpeg"
 	},
 	"deploy": {
 		"restartPolicyType": "ON_FAILURE",
